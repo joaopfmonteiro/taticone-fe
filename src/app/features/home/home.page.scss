@@ -1,0 +1,91 @@
+.background{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -2;
+}
+
+.imgFilter {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+  rgba(0,0,0,1) 0%,
+  rgba(0,0,0,.3) 50%,
+  rgba(0,0,0,0) 100%);
+}
+
+.header{
+   color: white;
+   height: 74px; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 15px;
+   padding-right: 15px;
+   background-color: #1d2230;
+   font-family: 'Roboto', Arial, sans-serif;
+   font-weight: 600;
+
+}
+
+.lateral-buttons{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.header-filter{
+    position: absolute;
+    width: 100vw;
+}
+
+.button-filter{
+    border-radius: 5px;
+    border: 1px solid white; 
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+
+.body h1{
+    width: 75%;
+    margin: 100px auto 0;
+    font-size: 46px;
+    color: rgba(255, 255, 255, 0.945);
+}
+
+.body h5{
+    margin-top: 40px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.755);
+}
+
+.body{
+    text-align: center;
+    display: block;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.login-button{
+    border-radius: 5px;
+    margin-top: 30px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+    background-color: #26A69A;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0px;
+}
+
+
+
+
