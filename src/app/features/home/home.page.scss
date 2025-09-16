@@ -37,10 +37,17 @@
     font-size: 13px;
 }
 
-.header-filter{
+.main-filter{
     position: absolute;
     width: 100vw;
+    text-decoration: none;
 }
+
+a{
+    text-decoration: none;
+    color: inherit; 
+}
+
 
 .button-filter{
     border-radius: 5px;

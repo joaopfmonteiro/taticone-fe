@@ -1,0 +1,143 @@
+.content-box{
+    box-shadow: 0 0 100px 10px rgba(0,0,0,.25);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px;
+    width: 740px;
+    height: 540px;
+    margin-inline: auto;  
+    background-color: white; 
+}
+
+.title{
+    text-align: center;
+    display: block;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.596);
+}
+
+.main-block{
+    display: flex;
+    gap: 1rem;
+}
+
+.col{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px; 
+    width: 100%;  
+}
+
+.main-input-block{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.single-input{
+    padding-left: 40px;
+    width: 98%;
+    height: 40px;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+
+}
+
+.single-input::placeholder,
+.double-input::placeholder {
+    color: #888;
+    font-size: 12px;
+    font-style: italic;
+    opacity: 1; 
+}
+
+.single-input:focus,
+.double-input:focus {
+outline: none; // remove o contorno azul padrão
+    box-shadow: 0 0 0 1px rgba(81, 82, 83, 0.2); // efeito de brilho
+}
+
+.double-input{
+    padding-left: 40px;
+    width: 95%;
+    height: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+}
+
+.double-div-inputs{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.subtitle{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.input-icon-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon-wrapper i {
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #5e5e5e;
+    font-size: 12px;
+    pointer-events: none;
+    background-color: #E9ECEF;
+    height: 100%;
+    border-radius: 5px 0 0 0px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.checkbox-wrapper i{
+    font-size: 43px;
+    color: #5e5e5ec5;
+}
+
+.checkbox-wrapper h5{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.466);
+    margin: 0;
+}
+
+.description{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.background{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
