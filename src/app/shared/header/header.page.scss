@@ -1,0 +1,35 @@
+.header{
+   color: white;
+   height: 74px; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 15px;
+   padding-right: 15px;
+   background-color: #1d2230;
+   font-family: 'Roboto', Arial, sans-serif;
+   font-weight: 600;
+}
+
+.lateral-buttons{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; 
+}
+
+.button-filter{
+    border-radius: 5px;
+    border: 1px solid white; 
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
