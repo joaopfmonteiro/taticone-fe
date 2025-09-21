@@ -166,3 +166,17 @@
     border: 0px;
     height: 40px;
 }
+
+input.ng-touched.ng-invalid,
+input.ng-dirty.ng-invalid,
+.input-icon-wrapper.invalid input,
+.checkbox-wrapper.invalid input {
+  border-color: #dc2626; /* vermelho */
+  outline-color: #dc2626;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0.5rem;
+}
