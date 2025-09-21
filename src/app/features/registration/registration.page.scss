@@ -63,7 +63,7 @@
 .single-input:focus,
 .double-input:focus {
     outline: none; 
-    box-shadow: 0 0 0 1px rgba(81, 82, 83, 0.2); // efeito de brilho
+    box-shadow: 0 0 0 1px rgba(81, 82, 83, 0.2); 
 }
 
 .double-input{
@@ -106,7 +106,7 @@
     font-size: 12px;
     pointer-events: none;
     background-color: #E9ECEF;
-    height: 100%;
+    height: 40px;
     border-radius: 5px 0 0 0px;
 }
 
@@ -171,12 +171,14 @@ input.ng-touched.ng-invalid,
 input.ng-dirty.ng-invalid,
 .input-icon-wrapper.invalid input,
 .checkbox-wrapper.invalid input {
-  border-color: #dc2626; /* vermelho */
-  outline-color: #dc2626;
+  border-color: #dc26269f;
+  outline-color: #dc26269f;
 }
 
 .error {
-  color: #dc2626;
-  font-size: 0.85rem;
-  margin: 0.25rem 0 0.5rem;
+  display: flex;
+  color: #dc26269f;
+  font-size: 0.7rem;
+  margin-top: 2px;
+  margin-left: 35px;
 }

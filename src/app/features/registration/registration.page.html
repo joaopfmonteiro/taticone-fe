@@ -24,10 +24,10 @@
                             [attr.aria-invalid]="isInvalid('role')"
                             aria-describedby="roleError"
                             />
+                            <small class="error" *ngIf="isInvalid('role')" id="roleError">
+                                You must select at least one role.
+                            </small>
                         </div>
-                        <small class="error" *ngIf="isInvalid('role')" id="roleError">
-                            You must select at least one role.
-                        </small>
                         <h5 class="description">
                             Discover if it’s worth using TaticOne as a coach.
                             Once you register, you can create your players’ 
@@ -53,10 +53,10 @@
                                     type="text"
                                     [attr.aria-invalid]="isInvalid('firstName')"
                                     >
+                                    <small class="error" *ngIf="isInvalid('firstName')">
+                                        {{ getError('firstName')}}
+                                    </small>
                                 </div>
-                                <small class="error" *ngIf="isInvalid('firstName')">
-                                    {{ getError('firstName')}}
-                                </small>
                                 <div class="input-icon-wrapper">
                                     <i class="fa-solid fa-user"></i>
                                     <input 
@@ -66,10 +66,10 @@
                                     type="text"
                                     [attr.aria-invalid]="isInvalid('lastName')"
                                     >
+                                    <small class="error" *ngIf="isInvalid('lastName')">
+                                        {{ getError('lastName')}}
+                                    </small>
                                 </div>
-                                <small class="error" *ngIf="isInvalid('lastName')">
-                                    {{ getError('lastName')}}
-                                </small>
                             </div>
                         <div class="input-icon-wrapper">
                             <i class="fa-solid fa-envelope"></i>
@@ -80,10 +80,10 @@
                             type="text"
                             [attr.aria-invalid]="isInvalid('email')"
                             >
+                            <small class="error" *ngIf="isInvalid('email')">
+                                {{ getError('email')}}
+                            </small>
                         </div>
-                        <small class="error" *ngIf="isInvalid('email')">
-                            {{ getError('email')}}
-                        </small>
                         <div class="input-icon-wrapper">
                             <i class="fa-solid fa-tag"></i>
                             <input 
@@ -93,10 +93,10 @@
                             type="text"
                             [attr.aria-invalid]="isInvalid('username')"
                             >
+                            <small class="error" *ngIf="isInvalid('username')">
+                                {{ getError('username')}}
+                            </small>
                         </div>
-                        <small class="error" *ngIf="isInvalid('username')">
-                            {{ getError('username')}}
-                        </small>
                         <div class="double-div-inputs">
                             <div class="input-icon-wrapper">
                                 <i class="fa-solid fa-lock"></i>
@@ -107,10 +107,10 @@
                                 type="password"
                                 [attr.aria-invalid]="isInvalid('password')"
                                 >
+                                <small class="error" *ngIf="isInvalid('password')">
+                                    {{ getError('password')}}
+                                </small>
                             </div>
-                            <small class="error" *ngIf="isInvalid('password')">
-                                {{ getError('password')}}
-                            </small>
                             <div class="input-icon-wrapper">
                                 <i class="fa-solid fa-lock"></i>
                                 <input 

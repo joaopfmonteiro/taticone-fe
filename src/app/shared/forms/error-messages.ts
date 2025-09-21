@@ -19,6 +19,10 @@ export const ERROR_MSGS: ErrorMap = {
         required: 'The password is required.',
         minlength: 'The password must be at least 8 characters'
     },
+    confirmPassword:{
+        required: 'The password is required.',
+        minlength: 'The password must be at least 8 characters'
+    },
     email:{
         required: 'The email is required.',
     },
