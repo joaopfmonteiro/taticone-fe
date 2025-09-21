@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormBuilder, Validators, AbstractControl, Validati
 import { HeaderPage } from '../../shared/header/header.page';
 import { AuthService } from '../../auth/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ERROR_MSGS } from '../../shared/forms/error-messages';
 
 function matchPasswords(group: AbstractControl): ValidationErrors | null {
   const pwd = group.get('password')?.value;
@@ -19,12 +20,36 @@ function matchPasswords(group: AbstractControl): ValidationErrors | null {
   styleUrls: ['./registration.page.scss']
 })
 export class RegistrationPage implements OnInit{
+
   private fb = inject(FormBuilder);
   private authService = inject(AuthService);
 
+  submitted = false;
   loading = false;
   error = '';
   success = false;
+
+  isInvalid(controlName: string): boolean {
+    const c = this.registrationForm.get(controlName);
+    return !!c && (c.touched || this.submitted) && c.invalid;
+  }
+
+  getError(controlName: string): string {
+    const c = this.registrationForm.get(controlName);
+    if (!c) return '';
+    if (!c.touched && !this.submitted) return '';
+    const errors = c.errors;
+    if (!errors) return '';
+
+    const map = (ERROR_MSGS as any)[controlName] || {};
+    for (const key of Object.keys(errors)) {
+      if (map[key]) {
+        const msg = map[key];
+        return typeof msg === 'function' ? msg(errors[key]) : msg;
+      }
+    }
+      return '';
+  }
 
   registrationForm = this.fb.group({
     firstName: ['', [Validators.required, Validators.minLength(2)]],
@@ -49,8 +74,9 @@ export class RegistrationPage implements OnInit{
 
   onSubmit() {
     if (this.registrationForm.invalid){
-      console.log('Registration invalid:');
       console.log(this.registrationForm.value);
+      this.registrationForm.markAllAsTouched();
+      console.log('Registration invalid:', this.registrationForm.value);
       return;
     }
 
