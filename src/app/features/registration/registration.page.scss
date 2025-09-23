@@ -10,15 +10,6 @@
     margin-top: 50px;
 }
 
-.title{
-    text-align: center;
-    display: block;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-weight: 300;
-    font-size: 35px;
-    color: rgba(0, 0, 0, 0.596);
-}
-
 .main-block{
     display: flex;
     gap: 1rem;
@@ -39,31 +30,6 @@
     gap: 1rem;
     align-items: center;
     width: 100%;
-}
-
-.single-input{
-    padding-left: 40px;
-    width: 98%;
-    height: 40px;
-    display: block;
-    box-sizing: border-box;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.205);
-
-}
-
-.single-input::placeholder,
-.double-input::placeholder {
-    color: #888;
-    font-size: 12px;
-    font-style: italic;
-    opacity: 1; 
-}
-
-.single-input:focus,
-.double-input:focus {
-    outline: none; 
-    box-shadow: 0 0 0 1px rgba(81, 82, 83, 0.2); 
 }
 
 .double-input{
@@ -89,25 +55,6 @@
     color: rgba(0, 0, 0, 0.466);
     margin-top: 10px;
 
-}
-
-.input-icon-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-.input-icon-wrapper i {
-    position: absolute;
-    display: flex; 
-    align-items: center; 
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #5e5e5e;
-    font-size: 12px;
-    pointer-events: none;
-    background-color: #E9ECEF;
-    height: 40px;
-    border-radius: 5px 0 0 0px;
 }
 
 .checkbox-wrapper {
@@ -137,48 +84,7 @@
     color: rgba(0, 0, 0, 0.466);
 }
 
-.background{
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-    opacity: 30%;
-}
-
 .main-block > .col:not(:first-child) {
     border-left: 1px solid #e0e0e0; 
     padding-left: 2rem;     
-}
-
-.login-button{
-    font-family: 'Roboto', Arial, sans-serif;
-    border-radius: 5px;
-    margin-top: 4px;
-    padding-right: 25px;
-    padding-left: 25px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-size: 14px;
-    background-color: #26A69A;
-    color: white;
-    font-weight: 400;
-    cursor: pointer;
-    border: 0px;
-    height: 40px;
-}
-
-input.ng-touched.ng-invalid,
-input.ng-dirty.ng-invalid,
-.input-icon-wrapper.invalid input,
-.checkbox-wrapper.invalid input {
-  border-color: #dc26269f;
-  outline-color: #dc26269f;
-}
-
-.error {
-  display: flex;
-  color: #dc26269f;
-  font-size: 0.7rem;
-  margin-top: 2px;
-  margin-left: 35px;
 }

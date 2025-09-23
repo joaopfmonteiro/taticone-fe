@@ -17,7 +17,8 @@ function matchPasswords(group: AbstractControl): ValidationErrors | null {
   standalone: true,
   imports: [HeaderPage, CommonModule, ReactiveFormsModule],
   templateUrl: './registration.page.html',
-  styleUrls: ['./registration.page.scss']
+  styleUrls: ['./registration.page.scss',
+    '../../styles/forms.scss']
 })
 export class RegistrationPage implements OnInit{
 
