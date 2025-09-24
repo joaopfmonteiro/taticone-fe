@@ -5,6 +5,7 @@ import { HeaderPage } from '../../shared/header/header.page';
 import { AuthService } from '../../auth/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ERROR_MSGS } from '../../shared/forms/error-messages';
+import { Router } from '@angular/router';
 
 function matchPasswords(group: AbstractControl): ValidationErrors | null {
   const pwd = group.get('password')?.value;
@@ -24,6 +25,7 @@ export class RegistrationPage implements OnInit{
 
   private fb = inject(FormBuilder);
   private authService = inject(AuthService);
+  private router = inject(Router);
 
   submitted = false;
   loading = false;
@@ -75,9 +77,7 @@ export class RegistrationPage implements OnInit{
 
   onSubmit() {
     if (this.registrationForm.invalid){
-      console.log(this.registrationForm.value);
       this.registrationForm.markAllAsTouched();
-      console.log('Registration invalid:', this.registrationForm.value);
       return;
     }
 
@@ -99,7 +99,7 @@ export class RegistrationPage implements OnInit{
         console.log('Registration successful:', response);
         this.success = true;
         this.registrationForm.reset({ role: 'COACH' });
-              console.log(this.registrationForm.value);
+        this.router.navigate(['/login']);
       },
       error: (err: HttpErrorResponse) => {
         console.error('Registration error:', err);
@@ -107,8 +107,6 @@ export class RegistrationPage implements OnInit{
           err.error?.message ||
           (typeof err.error === 'string' ? err.error : '') ||
           'Falha ao registar. Tenta novamente.';
-                console.log(this.registrationForm.value);
-
       },
       complete: () => {
         this.loading = false;

@@ -3,15 +3,16 @@
         <img class="background" src="assets/img/assets_task_01k56gyqhnfxfssr37ya063p10_1757934603_img_0 (1).webp">
     </div>
     <app-header></app-header>
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="content-box">
             <h1 class="title"> TaticOne</h1>
             <div class="main-input-block">
                 <div class="input-icon-wrapper">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-user"></i>
                     <input 
                     class="single-input" 
                     placeholder="Your email"
+                    formControlName="username"
                     type="text">
                     <small class="error">Mensagem de erro</small>
                 </div>
@@ -20,10 +21,11 @@
                     <input 
                     class="single-input" 
                     placeholder="Your email"
-                    type="text">
+                    formControlName="password"
+                    type="password">
                     <small class="error">Mensagem de erro</small>
                 </div>
-                <button type="submit" class="green-button">Create an account</button>
+                <button type="submit" class="green-button">Login</button>
             </div>
         </div>
     </form>
